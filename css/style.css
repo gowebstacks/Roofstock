@@ -149,6 +149,7 @@ ul li:before {
     background-color: #FFFFFF;
     box-shadow: 0 3px 8px 0 rgba(34,55,84,0.1);
     transition: all .3s;
+    height: 100%;
 }
 .content-academy__item:hover {
     box-shadow: 0 3px 10px 0 rgba(34,55,84,0.2);
@@ -167,6 +168,7 @@ ul li:before {
     border-radius: 4px;
     background-color: #62BE8F;
     padding: 82px 20px 46px;
+    margin-bottom: 80px;
 }
 .sub-heading {
     font-size: 20px;
@@ -184,4 +186,127 @@ ul li:before {
 .copyright {
     background-color: #62BE8F;
     padding: 20px;
+}
+.accordion-container,.set {
+    height: auto;
+}
+.faq {
+    margin-bottom: 140px;
+}
+.set {
+    margin-bottom: 20px;
+    border: 1px solid #E0DEF3;
+    border-radius: 4px;
+    background: #FFFFFF;
+    -webkit-transition: all .5s cubic-bezier(0,0,.45,.96);
+    -o-transition: all .5s cubic-bezier(0,0,.45,.96);
+    transition: all .5s cubic-bezier(0,0,.45,.96);
+}
+.set.active,.set>a:after,.set>a:before {
+    background: #fff;
+}
+.set.active>a {
+    color: #37383C;
+}
+.set>a {
+    display: block;
+    padding: 23px 66px;
+    position: relative;
+    color: #515151;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    font-size: 20px;
+    text-decoration: none;
+}
+.set>a:before {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 12px;
+    left: 23px;
+    top: 29px;
+    background: url(../images/chevron-up.svg) 0 -5px no-repeat;
+    background-size: cover;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.set>a:after {
+    width: 2px;
+    height: 12px;
+    right: 45px;
+    top: 49px;
+    border-radius: 1px;
+}
+.set>a.active:before {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.set .content {
+    display: none;
+    padding: 0 20px 20px 67px;
+}
+.will-you-get .content-academy__img-wrap img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.will-you-get .content-academy__title-wrap {
+    text-align: center;
+    color: #62BE8F;
+}
+.will-you-get {
+    margin-bottom: 54px;
+}
+.testimonial-item {
+    padding-bottom: 42px;
+}
+.testimonial__image-wrap img {
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 0 auto 25px;
+    object-fit: cover;
+}
+.testimonial__text {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.testimonial__name {
+    font-weight: 600;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.testimonial {
+    margin-bottom: 80px;
+}
+.section-mb-lg {
+    margin-bottom: 130px;
+}
+.teachers__slide {
+    border: 1px solid #E0DEF3;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    padding: 23px;
+}
+.teachers__content {
+    flex: 0 0 56%;
+    max-width: 56%;
+    padding-left: 38px;
+    padding-bottom: 10px;
+}
+.teachers__video-wrap {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.teachers-section {
+    overflow: hidden;
+}
+.teachers {
+    overflow: visible;
+    margin-bottom: 80px;
 }

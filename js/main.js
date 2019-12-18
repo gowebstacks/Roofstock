@@ -34,5 +34,53 @@ $(document).ready(function ($) {
     //     return false
     //
     // });
+
+
+    var swiper = new Swiper('#teachers', {
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        initialSlide: 1,
+        on: {
+            slideChange: function () {
+                $('.embed-responsive-item').trigger('pause');
+            },
+        },
+    });
+
+    if ($('.set').length) {
+
+        $(".set > a").on("click", function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).parent().removeClass("active");
+
+                $(this).siblings(".content").slideUp(300);
+                $(".set > a i")
+                    .removeClass("fa-minus")
+                    .addClass("fa-plus");
+            } else {
+                $(".set > a i")
+                    .removeClass("fa-minus")
+                    .addClass("fa-plus");
+                $(this)
+                    .find("i")
+                    .removeClass("fa-plus")
+                    .addClass("fa-minus");
+
+                $(".set > a").removeClass("active");
+                $(this).addClass("active");
+                $(".content").slideUp(300);
+                $('.set').removeClass("active");
+                $(this)
+                    .siblings(".content")
+                    .slideDown(300);
+                $(this).parent().addClass("active");
+            }
+            return false;
+        })
+    }
 });
 
