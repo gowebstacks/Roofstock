@@ -35,6 +35,12 @@ $(document).ready(function ($) {
     //
     // });
 
+    $('#tgl-btn').click(function () {
+        $(this).toggleClass('slicknav_open');
+        $('#header').toggleClass('slick-open');
+        $('.header-nav').slideToggle();
+    });
+
 
     var swiper = new Swiper('#teachers', {
         // pagination: {

@@ -154,8 +154,9 @@ ul li:before {
 .content-academy__item:hover {
     box-shadow: 0 3px 10px 0 rgba(34,55,84,0.2);
 }
-.content-academy__img-wrap {
-
+.content-academy__img-wrap img {
+    max-width: 100%;
+    height: auto;
 }
 .content-academy__item-wrap a {
     width: 100%;
@@ -210,7 +211,7 @@ ul li:before {
 }
 .set>a {
     display: block;
-    padding: 23px 66px;
+    padding: 23px 15px 23px 66px;
     position: relative;
     color: #515151;
     -webkit-transition: all .3s linear;
@@ -310,3 +311,233 @@ ul li:before {
     overflow: visible;
     margin-bottom: 80px;
 }
+
+.slicknav_icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33px;
+    height: 22px;
+    margin: 0
+}
+
+.slicknav_icon-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: all .3s;
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 5px
+}
+
+.slicknav_icon-bar:first-child {
+    top: 0;
+    width: 32px
+}
+
+.slicknav_icon-bar:nth-child(2) {
+    top: 9px;
+    width: 32px
+}
+
+.slicknav_icon-bar:nth-child(3) {
+    top: 18px;
+    width: 32px
+}
+
+.slicknav_open .slicknav_icon-bar:first-child {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 8px
+}
+
+.slicknav_open .slicknav_icon-bar:nth-child(2) {
+    opacity: 0
+}
+
+.slicknav_open .slicknav_icon-bar:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 8px;
+    width: 32px
+}
+#tgl-btn {
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    .content-academy__title-wrap {
+        font-size: 18px;
+        padding: 20px 15px;
+    }
+    h1, .h1 {
+        font-size: 34px;
+    }
+    .section-mb-lg,
+    .faq {
+        margin-bottom: 80px;
+    }
+    .trust-bur__logos {
+        padding: 0 10px;
+    }
+    .trust-bur {
+        padding: 30px;
+    }
+    .testimonial__name {
+        padding: 0 10px;
+    }
+    .testimonial-item {
+        padding-bottom: 63px;
+    }
+    .header-nav {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #header .container {
+        position: relative;
+    }
+    #tgl-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 8px;
+    }
+    .header-nav li {
+        margin: 0 0 14px 0;
+    }
+}
+@media (max-width: 767px) {
+
+    h1, .h1 {
+        font-size: 26px;
+    }
+    .hero-content {
+        margin-bottom: 25px;
+    }
+    .testimonial,
+    .section-mb-lg,
+    .faq,
+    .join-section,
+    .teachers,
+    .features,
+    .trust-bur {
+        margin-bottom: 50px;
+    }
+    .features {
+        padding: 60px 20px 23px;
+    }
+    .teachers__content,
+    .teachers__video-wrap {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .teachers__content {
+        padding-left: 0;
+    }
+    .teachers__video-wrap {
+        margin-bottom: 25px;
+    }
+    .teachers__content p {
+        margin-bottom: 0;
+    }
+    .join-section {
+        padding: 50px 0 24px;
+    }
+    .testimonial-item {
+        margin-bottom: 38px;
+        padding-bottom: 0;
+    }
+    .testimonial__name {
+        position: relative !important;
+    }
+    .testimonial__text {
+        margin-bottom: 20px;
+    }
+    .get-started {
+        padding: 47px 0 27px;
+    }
+    ol li, ul li,
+    p {
+        margin-bottom: 18px;
+    }
+    .features_title {
+        margin-bottom: 24px;
+    }
+    .header {
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 240px;
+    }
+
+    #tgl-btn {
+        top: 3px;
+    }
+}
+@media (max-width: 575px) {
+    h3, .h3 {
+        font-size: 22px;
+    }
+    .content-academy__img-wrap img {
+        width: 100%;
+    }
+    .content-academy__title-wrap {
+        min-height: 80px;
+    }
+    ol,
+    ul {
+        padding-left: 40px;
+    }
+    .content p {
+        margin-bottom: 10px;
+    }
+    .set .content {
+        padding-left: 20px;
+    }
+    .set>a {
+        padding: 15px 15px 15px 37px;
+    }
+    .set>a:before {
+        width: 15px;
+        height: 6px;
+        left: 11px;
+    }
+    .teachers__slide {
+        padding: 15px;
+    }
+
+    .features {
+        background-size: cover;
+    }
+    .features__list li:before {
+        top: 5px;
+    }
+    .features {
+        position: relative;
+        z-index: 1;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .features:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+}
+
